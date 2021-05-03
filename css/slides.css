@@ -1,0 +1,306 @@
+/* Слайдер */
+@font-face {
+    font-family: 'Philosopher';
+    src: url('../fonts/Philosopher.eot');
+    src: url('../fonts/Philosopher.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Philosopher.svg') format('svg'),
+         url('../fonts/Philosopher.woff') format('woff'),
+         url('../fonts/Philosopher.ttf') format('truetype');
+}
+
+.slides {   
+    display: none\0/;
+    z-index: 0;
+    height: 400px;
+    margin: 0px 5px 20px 5px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+/* Кадры анимации #anim_slides */
+@-webkit-keyframes anim_slides {
+    0% {
+        opacity: 0;
+        z-index: auto;
+    }
+    6% {
+        opacity: 1;
+        z-index: auto;
+    }
+    24% {
+        opacity: 1;
+        z-index: auto;
+    }
+    30% {
+        opacity: 0;
+        z-index: auto;
+    }
+    100% {
+        opacity: 0;
+        z-index: -5;
+    }
+}
+
+@-webkit-keyframes anim_slides_first {
+    0% {
+        opacity: 1;
+        z-index: auto;
+    }
+    6% {
+        opacity: 1;
+        z-index: auto;
+    }
+    24% {
+        opacity: 1;
+        z-index: auto;
+    }
+    30% {
+        opacity: 0;
+        z-index: auto;
+    }
+    100% {
+        opacity: 0;
+        z-index: -5;
+    }
+}
+
+
+@-moz-keyframes anim_slides {
+    0% {
+        opacity: 0;
+    }
+    6% {
+        opacity: 1;
+    }
+    24% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes anim_slides_first {
+    0% {
+        opacity: 1;
+        z-index: auto;
+    }
+    6% {
+        opacity: 1;
+        z-index: auto;
+    }
+    24% {
+        opacity: 1;
+        z-index: auto;
+    }
+    30% {
+        opacity: 0;
+        z-index: auto;
+    }
+    100% {
+        opacity: 0;
+        z-index: -5;
+    }
+} 
+
+.slides div {
+    opacity:0;
+    z-index: -5;
+    position:absolute;
+    margin: 0px 10px 20px 0px;
+    top:0;
+
+    /* анимация css3 */
+    -webkit-animation-name: anim_slides;
+    -webkit-animation-duration: 24.0s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+
+    -moz-animation-name: anim_slides;
+    -moz-animation-duration: 24.0s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: normal;
+    -moz-animation-play-state: running;
+    -moz-animation-fill-mode: forwards;
+}
+
+.slides div:first-child, .slides div:first-child span{
+    -webkit-animation-name: anim_slides_first;
+    -webkit-animation-duration: 24.0s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+}
+/* Задержки css3 */
+.slides div:nth-child(2), .slides div:nth-child(2) span {
+    -webkit-animation-delay: 6.0s;
+    -moz-animation-delay: 6.0s;
+}
+.slides div:nth-child(3), .slides div:nth-child(3) span {
+    -webkit-animation-delay: 12.0s;
+    -moz-animation-delay: 12.0s;
+}
+.slides div:nth-child(4), .slides div:nth-child(4) span {
+    -webkit-animation-delay: 18.0s;
+    -moz-animation-delay: 18.0s;
+}
+.slides div img {
+    display:block;
+}
+
+/* Кадры анимации #anim_titles */
+@-webkit-keyframes anim_titles {
+    0% {
+        left:100%;
+        opacity:0;
+    }
+    5% {
+        left:10%;
+        opacity:1;
+    }
+    20% {
+        left:10%;
+        opacity:1;
+    }
+    25% {
+        left:100%;
+        opacity:0;
+    }
+    100% {
+        left:100%;
+        opacity:0;
+    }
+}
+@-moz-keyframes anim_titles {
+    0% {
+        left:100%;
+        opacity:0;
+    }
+    5% {
+        left:10%;
+        opacity:1;
+    }
+    20% {
+        left:10%;
+        opacity:1;
+    }
+    25% {
+        left:100%;
+        opacity:0;
+    }
+    100% {
+        left:100%;
+        opacity:0;
+    }
+}
+
+.slides div span{
+    font-family: 'Philosopher', sans-serif;
+    text-align: center;
+    display: block;
+    background-color: transparent;
+    border-radius:10px 10px 10px 10px;
+    box-shadow:0 0 5px #FFFFFF inset;
+    color:#250e25;
+    font-size:280%;
+    right:10%;
+    margin:0 auto;
+    padding:20px;
+    position:absolute;
+    top:30%;
+    width:38%;
+
+    /* Анимация css3 */
+/*
+    -webkit-animation-name: anim_titles;
+    -webkit-animation-duration: 24.0s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-delay: 0;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+
+    -moz-animation-name: anim_titles;
+    -moz-animation-duration: 24.0s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: normal;
+    -moz-animation-delay: 0;
+    -moz-animation-play-state: running;
+    -moz-animation-fill-mode: forwards;
+*/
+    -webkit-animation-name: anim_slides;
+    -webkit-animation-duration: 24.0s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+
+    -moz-animation-name: anim_slides;
+    -moz-animation-duration: 24.0s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: normal;
+    -moz-animation-play-state: running;
+    -moz-animation-fill-mode: forwards;
+}
+.slides_ie {
+    display: none;
+    display: block\0/;
+    position: relative;
+    margin: 0 0 20px 10px;
+}
+
+.slides_ie span{
+    font-family: 'Philosopher', sans-serif;
+    text-align: center;
+    display: block;
+    background-color:#ffffff;
+    border-radius:10px 10px 10px 10px;
+    box-shadow:0 0 5px #FFFFFF inset;
+    color:#250e25;
+    font-size:40px;
+    margin:0 auto;
+    padding:20px;
+    position:absolute;
+    top:30%;
+    right:10%;
+    width:380px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1280px){
+    .slides{
+        left: -5px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .slides{
+        left: -5px;
+    }
+}
+/*
+@media screen and (max-width: 640px){
+    .slides{
+        left: -5px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .slides{
+        height: 300px;
+    }
+}
+*/

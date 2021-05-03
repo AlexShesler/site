@@ -1,0 +1,1 @@
+<a class="next" href="place_order.php">Далее</a>

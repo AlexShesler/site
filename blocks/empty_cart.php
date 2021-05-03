@@ -1,0 +1,1 @@
+<tr><td colspan="5"><center>Корзина пуста</center></td></tr>
