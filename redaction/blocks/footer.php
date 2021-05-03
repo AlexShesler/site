@@ -1,0 +1,1 @@
+<span id="text_footer">Все права защищены. &copy; Calypso 2015</span>
